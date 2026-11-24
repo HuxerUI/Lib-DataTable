@@ -1,0 +1,28 @@
+[package]
+namespace   = "huxerui"
+name        = "datatable"
+version     = "0.1.0"
+standard    = "c++23"
+description = "Virtualized data table component with sorting, selection, and inline editing for HuxerUI"
+license     = "MIT"
+repo        = "https://github.com/HuxerUI/Lib-DataTable"
+
+[package.metadata.huxerui]
+library   = "HuxerUI::DataTable"
+resources = "resources"
+name      = "datatable"
+id        = "org.huxerui.datatable"
+namespace = "huxerui"
+
+[dependencies]
+huxerui.huxerui = "0.5.5"
+
+[targets.huxerui_datatable]
+kind = "lib"
+
+[lib]
+path = "modules/datatable.cppm"
+
+[build]
+sources      = []
+include_dirs = ["include"]
